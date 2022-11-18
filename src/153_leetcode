@@ -13,11 +13,6 @@ class Solution {
             输入：nums = [3,4,5,1,2]
             输出：1
             解释：原数组为 [1,2,3,4,5] ，旋转 3 次得到输入数组。
-
-
-            git remote add origin git@github.com:zyjjfm/leetcode.git
-            git branch -M main
-                git push -u origin main
           */
         int low = 0;
         int high = nums.length - 1;
