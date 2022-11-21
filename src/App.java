@@ -7,7 +7,7 @@ public class App {
         // Solution153.findMin(nums);
         // Solution162.findPeakElement(nums);
 
-        System.out.println("======"+Solution162.findPeakElement(nums));
+        // System.out.println("======"+Solution162.findPeakElement(nums));
 
     }
 }
