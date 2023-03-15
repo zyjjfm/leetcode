@@ -7,7 +7,7 @@ public class Solution139 {
     public static boolean  wordBreak(String s, List<String> wordDict) {
         
         HashSet<String> wordDictSet = new HashSet(wordDict);
-
+        
         boolean[] dp = new boolean[s.length()+1];
 
         dp[0] = true;
@@ -19,11 +19,8 @@ public class Solution139 {
                     dp[i] = true;
                     break;
                 }
-
             }
-
         }
-
         return dp[s.length()];
     }
 
