@@ -7,8 +7,8 @@ public class Solution234 {
     // 如果是，返回 true ；否则，返回 false 。
 
     public boolean isPalindrome(ListNode head) {
-
         List<Integer> vals = new ArrayList<Integer>();
+        
         //将链表转成数组
         ListNode currentNode = head;
         while(currentNode != null){
