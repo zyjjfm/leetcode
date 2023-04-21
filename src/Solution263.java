@@ -14,13 +14,11 @@ public class Solution263 {
         }
         int [] factors = {2,3,5};
 
-        for(int factory:factors){
-            while(n % ){}
+        for(int factor:factors){
+            while(n % factor == 0){
+                n = n / factor;
+            }
         }
-
-
-
-
-        return true;
+        return n == 1;
     }
 }
