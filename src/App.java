@@ -2,14 +2,9 @@
 public class App {
     public static void main(String[] args) throws Exception {
         
-        System.out.println("Hello, World LeetCode!");
+        System.out.println("Hello, World Code!");
         int[] nums = {3,4,5,1,2};
-
         System.out.print("-------------------");
 
     }
-    
-
-
-
 }
