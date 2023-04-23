@@ -1,3 +1,4 @@
+import java.util.LinkedList;
 import java.util.Queue;
 
 public class MyStack {
@@ -18,8 +19,8 @@ public class MyStack {
     Queue<Integer> queue2;
 
     public MyStack() {
-        queue1 = new Linklist<Integer>();
-        queue2 = new Linklist<Integer>();
+        queue1 = new LinkedList<Integer>();
+        queue2 = new LinkedList<Integer>();
     }
     
     public void push(int x) {
@@ -42,6 +43,6 @@ public class MyStack {
     }
     
     public boolean empty() {
-        queue1.isEmpty();
+      return  queue1.isEmpty();
     }
 }
