@@ -21,9 +21,6 @@ public class Solution383 {
                 return false;
             }
         }
-
-
-
-        return false;
+        return true;
     }
 }
