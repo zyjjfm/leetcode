@@ -1,0 +1,57 @@
+import java.util.HashMap;
+import java.util.Map;
+
+public class Solution290 {
+
+    // 给定一种规律 pattern 和一个字符串 s ，判断 s 是否遵循相同的规律。
+    // 这里的 遵循 指完全匹配，例如， pattern 里的每个字母和字符串 s 中的每个非空单词之间存在着双向连接的对应规律。
+
+    /**
+    示例1:
+    输入: pattern = "abba", s = "dog cat cat dog"
+    输出: true
+    示例 2:
+
+    输入:pattern = "abba", s = "dog cat cat fish"
+    输出: false
+    示例 3:
+
+    输入: pattern = "aaaa", s = "dog cat cat dog"
+    输出: false
+
+    */
+    public boolean wordPattern(String pattern, String s) {
+
+        Map<String,Character> str2ch = new HashMap<String,Character>();
+        Map<String,Character> ch2str = new HashMap<String,Character>();
+
+        int m = s.length();
+        int i = 0;
+
+        for (int p = 0; p < pattern.length(); p++) {
+            
+            char ch = pattern.charAt(p);
+            if(i >= m){
+                return false;
+            }
+            int j = i;
+            while(j < m && s.charAt(j) != ' '){
+                j ++;
+            }
+            String tmp = s.substring(i,j);
+
+            if(str2ch.containsKey(tmp) && str2ch.get(tmp) != ch){
+                return false;
+            }
+
+            if(ch2str.containsKey(ch) && !tmp.equals(ch2str.get(ch))){
+                return false;
+            }
+
+            str2ch.put(tmp, ch);
+            ch2str.put(ch, tmp);
+            i = j + 1;
+        }
+        return i >= m;
+    }
+}
