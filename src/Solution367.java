@@ -1,4 +1,3 @@
-
 import java.util.ArrayList;
 
 public class Solution367 {
@@ -7,7 +6,7 @@ public class Solution367 {
     */
     public boolean isPerfectSquare(int num){
 
-      int left = 0, right = 0;
+      int left = 0, right = num;
       while(left <= right ){
 
         int mid = (right - left )/2 + left;
