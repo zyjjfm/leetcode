@@ -23,7 +23,7 @@ public class Solution290 {
     public boolean wordPattern(String pattern, String s) {
 
         Map<String,Character> str2ch = new HashMap<String,Character>();
-        Map<String,Character> ch2str = new HashMap<String,Character>();
+        Map<Character,String> ch2str = new HashMap<Character,String>();
 
         int m = s.length();
         int i = 0;
