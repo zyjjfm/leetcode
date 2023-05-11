@@ -32,16 +32,12 @@ public class Solution228 {
             StringBuffer temp = new StringBuffer(Integer.toString(nums[low]));
 
             if(low < high){
-                
-
+                temp.append("->");
+                temp.append(Integer.toString(nums[high]));
             }
+            ret.add(temp.toString());
 
         }
-    
-
-
-
-
         return ret;
 
     }
