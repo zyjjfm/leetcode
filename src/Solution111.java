@@ -24,9 +24,16 @@ public int minDepth(TreeNode root){
         //当前层的节点个数
         int size = queue.size();
         while(size -- > 0){
-
-
-
+            TreeNode cur = queue.poll();
+            if(cur.left == null && cur.right == null){
+                return level;
+            }
+            if(cur.left != null){
+                queue.offer(cur.left);
+            }
+            if(cur.right != null){
+                queue.offer(cur.right);
+            }
         }
     }
     return -1;
