@@ -9,37 +9,37 @@ public class Solution163 {
 返回准确涵盖所有缺失数字的 最小排序 区间列表。也就是说，nums 的任何元素都不在任何区间内，并且每个缺失的数字都在其中一个区间内。
 */
 
-public List<String> findMissingRanges(int[] nums,int lower,int upper){
+public static List<String>  findMissingRanges(int[] nums,int lower,int upper){
 
     List<String> ans = new ArrayList<>();
     int n = nums.length;
+
     if(n == 0){
         ans.add(helper(lower-1, upper+1));
         return ans;
     }
+
     if(lower < nums[0]){
         ans.add(helper(lower - 1, nums[0]));
     }
+
     for(int idx = 0;idx < n - 1;++idx){
         if(nums[idx] +1 != nums[idx + 1]){
             ans.add(helper(nums[n - 1], nums[idx + 1]));
         }
-
     }
-
-
-
-
+    if (upper > nums[n - 1]){
+        ans.add(helper(nums[n - 1], upper + 1));
+    };
     return ans;
 }
-private String helper(int left,int right){
-
-    StringBuilder builder = new StringBuilder();
-    if(left + 2 == right){
-        builder.append(left+1);
-    }else{
-        builder.append(left + 1).append("->").append(right -1);
+    public static String helper(int left,int right){
+        StringBuilder builder = new StringBuilder();
+        if(left + 2 == right){
+            builder.append(left+1);
+        }else{
+            builder.append(left + 1).append("->").append(right -1);
+        }
+        return builder.toString();
     }
-    return builder.toString();
-  }
 }
