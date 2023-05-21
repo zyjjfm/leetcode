@@ -1,8 +1,5 @@
-import java.lang.reflect.Array;
+
 import java.util.Arrays;
-
-import javax.swing.text.html.parser.Element;
-
 public class Solution349 {
 /*
 
@@ -23,7 +20,9 @@ public int[] intersection(int[] nums1, int[] nums2){
     int index = 0;
     int index1 = 0;
     int index2 = 0;
+
     while(index1 < length1 && index2 < length2){
+
         int num1 = nums1[index1];
         int num2 = nums2[index2];
 
@@ -34,6 +33,7 @@ public int[] intersection(int[] nums1, int[] nums2){
             }
             index1++;
             index2++;
+
         }else if(num1 < num2){
             index1++;
         }else{
