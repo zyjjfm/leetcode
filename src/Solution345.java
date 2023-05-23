@@ -19,7 +19,6 @@ public class Solution345 {
       int n = s.length();
       char[] arr = s.toCharArray();
       int i = 0, j = n - 1;
-
       while(i < j){
         while(i < n && !isVowel(arr[i])){
           ++i;
@@ -41,12 +40,9 @@ public class Solution345 {
     public boolean isVowel(char ch){
       return "aeiouAEIOU".indexOf(ch) >= 0;
     }
-
     public void swap(char[] arr,int i,int j){
-
       char temp = arr[i];
       arr[i] =arr[j];
       arr[j] = temp;
-
     }
 }
