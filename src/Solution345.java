@@ -33,8 +33,7 @@ public class Solution345 {
         }
       }
 
-      return "";
-
+      return new String(arr);
     }
 
     public boolean isVowel(char ch){
