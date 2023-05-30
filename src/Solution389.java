@@ -9,20 +9,19 @@ public class Solution389 {
     */
     public boolean isPerfectSquare(int num){
 
-      int left = 0, right = num;
-      while(left <= right ){
-
-        int mid = (right - left )/2 + left;
-        long square = (long) mid * mid;
-  
-        if(square < num){
-          left = mid +1;
-        }else if(square > num){
-          right = mid -1;
-        }else{
-          return true;
+      public char findTheDifference(String s, String t) {
+        int[] cnt = new int[26];
+        for (int i = 0; i < s.length(); ++i) {
+            char ch = s.charAt(i);
+            cnt[ch - 'a']++;
         }
-      }
-      return false;
+        for (int i = 0; i < t.length(); ++i) {
+            char ch = t.charAt(i);
+            cnt[ch - 'a']--;
+            if (cnt[ch - 'a'] < 0) {
+                return ch;
+            }
+        }
+        return ' ';
     }
   }
