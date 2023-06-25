@@ -6,8 +6,11 @@ public class App {
 
         int[] nums = {1,2,4,6,8,12};
 
+
         System.out.println("-----------------------------------");
+        
         System.out.println(Solution163.findMissingRanges(nums,12,23));
+        
         System.out.println("-----------------------------------");
 
         
