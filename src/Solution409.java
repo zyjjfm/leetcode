@@ -13,13 +13,19 @@ public class Solution409 {
 
             int[] count = new int[128];
             int length = s.length();
+            int ans = 0;
 
-            for
-
-
-
-
-
-        return 0;
+            for(int i = 0;i<length;i++){
+                char c = s.charAt(i);
+                count[c]++;
+            }
+            for(int v:count){
+                ans += v / 2 * 2;
+                if(v % 2 == 1 && ans % 2 == 0){
+                    ans ++;
+                }
+            }
+            
+        return ans;
     }
 }

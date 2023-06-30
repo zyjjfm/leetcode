@@ -24,7 +24,7 @@ public class Solution506 {
 
         ans[arr[i][1]] = Integer.toString(i+1);
       }else{
-        ans[arr[i][1]] = desc[i]
+        ans[arr[i][1]] = desc[i];
       }
     }
     return ans;
