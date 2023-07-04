@@ -1,9 +1,8 @@
 import java.util.LinkedList;
 import java.util.Queue;
 
-import javax.xml.namespace.QName;
-
 public class Solution104 {
+
     public int maxDepth(TreeNode root){
         if(root == null){
             return 0;
@@ -23,16 +22,14 @@ public class Solution104 {
                 if(node.right != null){
                     queue.offer(node.right);
                 }
+                size --;
             }
-
-            return ans;
+            ans++;
+           
         }
+
+         return ans;
     }
-
-
-
-
-
 
 }
 
