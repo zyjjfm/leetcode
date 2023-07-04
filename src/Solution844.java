@@ -8,7 +8,7 @@ public class Solution844 {
 
         public boolean backspaceCompare(String S,String T){
 
-            return false;
+            return build(S).equals(build(T));
      }
 
      public String build(String str){
