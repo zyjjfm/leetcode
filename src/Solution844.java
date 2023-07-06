@@ -1,5 +1,4 @@
 public class Solution844 {
-    public int findContentChildren(int[] g, int[] s) {
 
     /**
      比较含退格的字符串
