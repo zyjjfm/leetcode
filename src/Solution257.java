@@ -8,7 +8,7 @@ public class Solution257 {
     */
     public List<String> binaryTreePaths(TreeNode root){
         List<String> paths = new ArrayList<String>();
-        constructPaths();
+        constructPaths(root,"",paths);
         return paths;
     }
 
