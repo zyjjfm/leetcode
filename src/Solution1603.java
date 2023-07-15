@@ -20,13 +20,17 @@ public class Solution1603 {
                 return true;
             }
         }else if(carType == 2){
-
-            if(){
-                
+            if(medium > 0){
+                medium--;
+                return true;
             }
 
         }else if(carType == 3){
-
+            if(small > 0){
+                small--;
+                return true;
+            }
         }
+        return false;
     }
     }
