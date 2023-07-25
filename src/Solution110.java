@@ -23,10 +23,8 @@ public class Solution110 {
         if(root == null){
             return true;
         }else{
-            return Math.abs()
+            return Math.abs(height(root.left)- height(root.right)) <= 1 && isBalanced(root.left) && isBalanced(root.right
         }
-
-        return true;
     }
 
     public int Height(TreeNode root){
