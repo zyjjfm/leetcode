@@ -6,7 +6,6 @@ public class Solution170 {
 /**
 170. 两数之和 III - 数据结构设计
 
-
 设计一个接收整数流的数据结构，该数据结构支持检查是否存在两数之和等于特定值。
 
 实现 TwoSum 类：
@@ -37,12 +36,15 @@ public boolean find(int value) {
         int complement = value - entry.getKey();
 
         if(complement != entry.getKey()){
+
             if(this.num_counts.containsKey(entry.getKey())){
-
+                return true;
             }else{
-
+                if(entry.getValue() > 1){
+                    return true;
+                }
             }
-
+            return false;
         }
     }
 
