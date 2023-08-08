@@ -20,8 +20,7 @@ public class Solution645 {
         int n = nums.length;
         Arrays.sort(nums);
         int pre = 0;
-
-
+        
         for(int i = 0;i< n;i++){ 
             int curr = nums[i];
             if(curr == pre){
