@@ -10,42 +10,19 @@ public class Solution392 {
     如果有大量输入的 S，称作 S1, S2, ... , Sk 其中 k >= 10亿，你需要依次检查它们是否为 T 的子序列。
     在这种情况下，你会怎样改变代码？
 
-
-    class Solution {
-        public boolean isSubsequence(String s, String t) {
-            int n = s.length(), m = t.length();
-            int i = 0, j = 0;
-            while (i < n && j < m) {
-                if (s.charAt(i) == t.charAt(j)) {
-                    i++;
-                }
-                j++;
-            }
-            return i == n;
-        }
-    }
-
     */
 
     public boolean isSubsequence(String s, String t) {
-        int n = s.length();
-        int m = t.length();
+        int n = s.length(),m = t.length();
+        int i = 0;
+        int j = 0;
         while(i < n && j < m){
-
             if(s.charAt(i) == t.charAt(j)){
-
                 i++;
             }
             j++;
         }
-
-
-
-
-
-
-
-        return false;
+        return i == n ;
     }
 }
 
