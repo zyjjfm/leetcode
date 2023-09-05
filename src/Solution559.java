@@ -1,3 +1,5 @@
+import java.util.List;
+
 public class Solution559 {
 
     public int maxDepth(Node root){
@@ -8,14 +10,11 @@ public class Solution559 {
         int maxChildDepth = 0;
 
         List<Node> children = root.children;
-
-
-        return 1;
+        for(Node child:children){
+            maxChildDepth = Math.max(maxChildDepth, childDepth);
+        }
+        return maxChildDepth + 1;
     }
-
-
-
-
 
 }
 
