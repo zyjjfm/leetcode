@@ -5,9 +5,7 @@ public class Solution405 {
         if(num == 0){
             return "0";
         }
-
         StringBuffer sb = new StringBuffer();
-        
         for(int i = 7 ;i >= 0;i--){
             int val = (num >> (4 * i)) & 0xf;
             if(sb.length() > 0 || val > 0){
