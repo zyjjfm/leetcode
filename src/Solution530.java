@@ -5,7 +5,6 @@ public class Solution530 {
 
     // 530. 二叉搜索树的最小绝对差
       public int getMinimumDifference(TreeNode root) {
-
         ans = Integer.MAX_VALUE;
         pre = -1;
         dfs(root);
