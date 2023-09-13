@@ -22,6 +22,6 @@ public class Solution530 {
         ans = Math.min(ans, root.val - pre);
         pre = root.val;
       }
-      dfs(root);
+      dfs(root.right);
     }
 }
