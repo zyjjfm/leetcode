@@ -6,13 +6,22 @@ public class Solution1221 {
      若其中一个是平衡字符串，则另一个的 L\texttt{L}L 和 R\texttt{R}R 字符的数量必然是相同的，所以也一定是平衡字符串。
       为了最大化分割数量，我们可以不断循环，每次从 sss 中分割出一个最短的平衡前缀，由于剩余部分也是平衡字符串，我们可以将其当作 sss 继续分割，直至 sss 为空时，结束循环。
     */
-    public int maxArea(int[] height) {
-        int i = 0,j = height.length - 1, res = 0;
-         while(i < j){
-            res = height[i] < height[j] ? 
-            Math.max(res, (j - i) * height[i++]) :
-            Math.max(res, (j - i) * height[j--]);
-         }
-        return res;
+    public int balancedStringSplite(String s) {
+        int ans = 0,d = 0;
+        for(int i = 0;i<s.length();++i){
+
+            char ch =s.charAt(i);
+            
+            if(ch == 'L'){
+                ++d;
+            }else{
+                --d;
+            }
+            if(d == 0){
+                ++ans;
+            }
+
+        }
+        return ans;
     }
 }
