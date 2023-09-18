@@ -33,20 +33,18 @@ public class Solution914 {
         for(int X = 2;X <= N;++X){
 
             if(N % X == 0){
-
+                boolean flag = true;
+                for(int v : values){
+                    if(v % X != 0){
+                        flag =false;
+                        break;
+                    }
+                }
+                if(flag){
+                    return true;
+                }
             }
-
-
-
-
         }
-
-
-
-
-
-
-
 
         return false;
     }
