@@ -22,11 +22,9 @@ public class Solution448 {
         List<Integer> ret = new ArrayList<Integer>();
 
         for(int i = 0;i<n;i++){
-            if(int i = 0;i < n;i++){
-                if(nums[i] < n){
+                if(nums[i] <= n){
                     ret.add(i+1);
                 }
-            }
         }
         return ret;
     }
