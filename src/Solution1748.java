@@ -7,13 +7,14 @@ public class Solution1748 {
 
         Map<Integer,Integer> cnt = new HashMap<Integer,Integer>();
         for(int num:nums){
-            ctn.put(num,cnt.getOrDefault(num,0)+1);
+            cnt.put(num,cnt.getOrDefault(num,0)+1);
         }
         int ans = 0;
 
         for(Map.Entry<Integer,Integer> entry:cnt.entrySet()){
 
             int num = entry.getKey(),c = entry.getValue();
+
             if(c == 1){
                 ans += num;
             }
