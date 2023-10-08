@@ -31,13 +31,9 @@ public class Solution463 {
                         cnt += 1;
                     }
                 }
-
                 ans += cnt;
-
-                
             }
         }
-
-        return 1;
+        return ans;
     }
 }
