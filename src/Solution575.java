@@ -1,6 +1,8 @@
 import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
 
-public class Solution561 {
+public class Solution575 {
     
     /**
     575. 分糖果
@@ -13,7 +15,12 @@ public class Solution561 {
     返回： Alice 在仅吃掉 n / 2 枚糖的情况下，可以吃到糖的 最多 种类数。
     */
     public int distributeCandies(int[] candyType) {
-        
 
+        Set<Integer> set = new HashSet<Integer>();
+        for(int candy : candyType){
+            set.add(candy);
+        }
+
+        return Math.min(set.size(), candyType.length/2);
     }
 }
