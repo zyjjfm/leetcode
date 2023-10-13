@@ -22,13 +22,6 @@ public class Solution441 {
                 right = mid - 1;
             }
         }
-
-
-
-
-
-        
-
-        return 0;
+        return left;
     }
 }
