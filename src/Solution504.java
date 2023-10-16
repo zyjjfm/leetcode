@@ -9,12 +9,20 @@ public class Solution504 {
             return "0";
         }
        
-        boolean nevat
+        boolean negative = num < 0;
+        num = Math.abs(num);
 
+        StringBuffer digits = new StringBuffer();
 
+        while(num > 0){
+             digits.append(num % 7);
+             num /= 7;
+        }
 
-
-    return "";
+        if(negative){
+            digits.append('-');
+        }
+    return digits.reverse().toString();
     }
 }
 
