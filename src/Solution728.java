@@ -17,7 +17,6 @@ public class Solution728 {
    public List<Integer> selfDividingNumbers(int left, int right) {
 
     List<Integer> ans = new ArrayList<Integer>();
-
     for(int i = left;i <= right;i++){
         if(isSelfDividing(i)){
             ans.add(i);
@@ -27,9 +26,7 @@ public class Solution728 {
     }
 
     public boolean isSelfDividing(int num){
-
         int temp = num;
-    
         while(temp > 0){
             int digit = temp % 10;
             if(digit == 0 || num % digit != 0){
@@ -39,5 +36,4 @@ public class Solution728 {
         }
         return true;
     }
-
 }
