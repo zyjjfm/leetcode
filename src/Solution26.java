@@ -24,7 +24,7 @@ public class Solution26 {
                 nums[slow] = nums[fast];
                 ++ slow;
             }
-
+            ++fast;
 
         }
         return slow;
