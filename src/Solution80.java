@@ -11,7 +11,6 @@ public class Solution80 {
     public int removeDuplicates(int[] nums) {
 
         int n = nums.length;
-
         if(n <= 2){
             return n;
         }
