@@ -19,8 +19,8 @@ public class Solution169 {
         Map.Entry<Integer,Integer> majorityEntry = null;
 
         for(Map.Entry<Integer,Integer> entry:counts.entrySet()){
-            if(majorityEntry == null || entry.getValue() > ){
-                
+            if(majorityEntry == null || entry.getValue() > majorityEntry.getValue()){
+                majorityEntry = entry;
             }
         }
         return majorityEntry.getKey();
