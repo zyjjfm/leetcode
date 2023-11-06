@@ -36,7 +36,6 @@ public class Solution380 {
             return false;
         }
         int index = nums.size();
-
         nums.add(val);
         indicas.put(val, index);
 
@@ -51,12 +50,9 @@ public class Solution380 {
 
         int index = indicas.get(val);
         int last = nums.get(nums.size() - 1);
-
         nums.set(index, last);
         indicas.put(last, index);
-        
         nums.remove(nums.size() - 1);
-
         indicas.remove(val);
         return true;
     
