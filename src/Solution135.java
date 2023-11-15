@@ -24,15 +24,15 @@ public class Solution135 {
         }
         int right = 0,ret = 0;
 
-
-        
-
-
-        
-
-
-        return 0;
-
+        for(int i = n -1;i >= 0;i--){
+            if(i < n -1 && ratings[i] > ratings[i+1]){
+                right ++;
+            }else{
+                right = 1;
+            }
+            ret += Math.max(left[i], right);
+        }
+        return ret;
     }
 }
 
