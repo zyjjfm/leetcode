@@ -34,18 +34,15 @@ public class Solution134 {
                 }
                 cnt ++;
             }
-            if(){
-
+            if(cnt == n){
+                return i;
             }else {
-                
+                i = i + cnt +1;
             }
-
-
-
-
+   
         }
 
-        return 1;
+        return -1;
     }
 }
 
