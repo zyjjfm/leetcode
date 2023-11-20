@@ -31,15 +31,9 @@ public class Solution13 {
                 ans -= value;
 
             }else{
-
-
+                ans += value;
             }
             
-
-
-
-
-
         }
         
         return ans;
