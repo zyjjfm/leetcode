@@ -26,7 +26,7 @@ public class Solution13 {
 
             int value = symbolValues.get(s.charAt(i));
 
-            if(i < n -1 && value < symbolValues.get(s.charAt(i+i))){
+            if(i < n -1 && value < symbolValues.get(s.charAt(i+1))){
 
                 ans -= value;
 
