@@ -12,7 +12,6 @@ public class Solution151 {
 
         // 除去开头和末尾的空白字符
         s = s.trim();
-        // .asList(s.split("\\s+"));
         List<String> wordList = Arrays.asList(s.split("\\s+"));
 
         Collections.reverse(wordList);
