@@ -56,7 +56,7 @@ public class Solution68 {
         sb.append(blank(avgSpace));
         sb.append(join(words,left + extraSpaces + 1,right,blank(avgSpace)));
         ans.add(sb.toString());
-        
+
         }
     }
 
@@ -72,7 +72,7 @@ public class Solution68 {
 
     // join 返回用 sep 拼接 [left, right) 范围内的 words 组成的字符串
     public StringBuffer join(String[] words,int left,int right,String sep){
-
+        
         StringBuffer sb = new StringBuffer(words[left]);
         for(int i = left +1;i < right;++i){
             sb.append(sep);
@@ -80,7 +80,4 @@ public class Solution68 {
         }
         return sb; 
     }
-
-
-
 }
