@@ -10,7 +10,6 @@ public class App {
         System.out.println(Solution163.findMissingRanges(nums,12,23));
         System.out.println("-----------------------------------");     
 
-
         
     }
 }
