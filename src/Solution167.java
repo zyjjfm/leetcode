@@ -31,14 +31,9 @@ public class Solution167 {
                 }else{
                     low = mid + 1;
                 }
-
              }
-
         }
 
-
-
-
-
-    return new int[]{};
+    return new int[]{-1,-1};
     }
+}
