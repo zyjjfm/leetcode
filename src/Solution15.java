@@ -40,7 +40,7 @@ public class Solution15 {
                     continue;
                 }
                 // 需要保证 b的指针在c的指针的左侧
-                while ( second < third && nums[second] == nums[second - 1]) {
+                while ( second < third && nums[second] + nums[third] > target) {
                     -- third;
                 }
                 //如果指针重合，随着b后续的增加
