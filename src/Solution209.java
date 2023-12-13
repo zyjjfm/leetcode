@@ -24,7 +24,7 @@ public class Solution209 {
 
         while (end < n) {
             sum += nums[end];
-            while(end < n){
+            while(sum >= s){
                 ans = Math.min(ans,end - start + 1);
                 sum -= nums[start];
                 start++;
