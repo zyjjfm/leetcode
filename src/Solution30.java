@@ -8,8 +8,8 @@ public class Solution30 {
     /**
      * 
          30. 给定一个字符串 s 和一个字符串数组 words。 words 中所有字符串 长度相同。
-
     */
+    
         public List<Integer> findSubstring(String s, String[] words) {
 
             List<Integer> res = new ArrayList<Integer>();
@@ -33,12 +33,12 @@ public class Solution30 {
                         differ.remove(word);
                     }
 
-                
+                }
                 for(int start = i;start < ls - m * n + 1; start += n){
                     
                     if(start != i){
 
-                        String word = s.substring(start + (m - 1) * n,start + m * n);
+                         String word = s.substring(start + (m - 1) * n, start + m * n);
                         differ.put(word, differ.getOrDefault(word, 0) + 1);
                         if(differ.get(word) == 0){
                             differ.remove(word);
@@ -55,9 +55,9 @@ public class Solution30 {
                         res.add(start);
                     }
                 }
-                }
             }
         return res;
+
     }
 }
 
