@@ -14,8 +14,6 @@ public class Solution88 {
     if(sLen == 0 || tLen == 0 || sLen < tLen){
         return "";
     }
-
-
     char[] charArrayS = s.toCharArray();
     char[] charArrayT = t.toCharArray();
 
@@ -23,7 +21,7 @@ public class Solution88 {
     int [] tFreq = new int[128];
 
     for(char c:charArrayT){
-
+        tFreq[c]++;
     }
 
 
@@ -55,7 +53,7 @@ public class Solution88 {
                 begin = left;
             }
 
-            if(tFreq[charArrayS[right]] == 0){
+            if(tFreq[charArrayS[left]] == 0){
                 left ++ ;
                 continue;
             }
@@ -72,9 +70,8 @@ public class Solution88 {
     if(minLen == sLen +1){
         return "";
     } 
-    return "";
+    return s.substring(begin, begin+minLen);
     }
-
 }
 
 
