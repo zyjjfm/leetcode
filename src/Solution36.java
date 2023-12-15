@@ -19,7 +19,8 @@ public class Solution36 {
         int [][][] subboxes = new int[3][3][9];
 
         for(int i = 0;i < 9;i++){
-            for(int j = 0;j < 9;j++){
+
+            for(int j = 0;j < 9; j++){
 
                 char c = board[i][j];
                 
@@ -28,6 +29,8 @@ public class Solution36 {
                     int index = c - '0' - 1;
 
                     rows[i][index]++;
+
+                    columns[j][index]++;
 
                     subboxes[i / 3][j / 3][index]++;
 
