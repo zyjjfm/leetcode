@@ -14,7 +14,7 @@ public class Solution73 {
             if(matrix[i][0] == 0){
                 flagCol0 = true;
             }
-
+            
             for(int j = 1;j < n; j++){
 
                 if(matrix[i][j] == 0){
