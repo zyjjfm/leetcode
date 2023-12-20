@@ -19,8 +19,8 @@ public class Solution205 {
     
     public boolean isIsomorphic(String s, String t) {
 
-      Map<Character，Character> s2t = new HashMap<Character，Character>();
-      Map<Character,Character> t2s = new HashMap<Character，Character>();
+      Map<Character,Character> s2t = new HashMap<Character,Character>();
+      Map<Character,Character> t2s = new HashMap<Character,Character>();
 
 
       int len = s.length();
@@ -34,8 +34,6 @@ public class Solution205 {
 
           return false;
         }
-      }
-
       }
       return true;
     }
