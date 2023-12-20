@@ -1,6 +1,5 @@
 import java.util.HashMap;
 import java.util.Map;
-
 public class Solution290 {
 
     // 给定一种规律 pattern 和一个字符串 s ，判断 s 是否遵循相同的规律。
@@ -28,29 +27,28 @@ public class Solution290 {
         int m = s.length();
         int i = 0;
 
-        for (int p = 0; p < pattern.length(); p++) {
-            
+        for(int p = 0;p < pattern.length();++p){
+
             char ch = pattern.charAt(p);
             if(i >= m){
                 return false;
             }
             int j = i;
-            while(j < m && s.charAt(j) != ' '){
-                j ++;
-            }
-            String tmp = s.substring(i,j);
 
+            while (j < m && s.charAt(j) != ' ') {
+                j++;
+            }
+            String tmp = s.substring(i, j);
             if(str2ch.containsKey(tmp) && str2ch.get(tmp) != ch){
                 return false;
             }
-
             if(ch2str.containsKey(ch) && !tmp.equals(ch2str.get(ch))){
                 return false;
             }
 
             str2ch.put(tmp, ch);
             ch2str.put(ch, tmp);
-            i = j + 1;
+            i = j +1;
         }
         return i >= m;
     }

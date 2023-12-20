@@ -34,6 +34,9 @@ public class Solution205 {
 
           return false;
         }
+        s2t.put(x, y);
+        t2s.put(y, x);
+
       }
       return true;
     }
