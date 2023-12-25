@@ -33,7 +33,7 @@ public class Solution49 {
 
 
 
-        return null;
+        return new ArrayList<List<String>>(map.values());
     }
 }
 
