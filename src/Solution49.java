@@ -28,11 +28,6 @@ public class Solution49 {
             List<String> list = map.getOrDefault(key, new ArrayList<String>());
             list.add(str);
             map.put(key, list);
-
-
-
-
-
         }
 
 
