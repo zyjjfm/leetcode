@@ -26,11 +26,10 @@ public class Solution128 {
                 int currentStreak = 1;
 
                 while(num_set.contains(currentNum + 1)){
-
                     currentNum += 1;
                     currentStreak += 1;
                 }
-                longestStreak = Math.max(currentStreak, longestStreak);
+                longestStreak = Math.max(longestStreak,currentStreak);
             }
         }
 
