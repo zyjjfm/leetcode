@@ -29,24 +29,15 @@ public class Solution56 {
             int R = intervals[i][1];
 
             if(merged.size() == 0 || merged.get(merged.size() - 1)[1] < L){
-            
+                
+                merged.add(new int[]{L,R});
+
+            }else{
+                merged.get(merged.size() - 1)[1] = Math.max(merged.get(merged.size() - 1)[1], R);
             }
-
-
-
-
         }
 
-
-
-
-
-
-
-
-        
-
-        return new int[][]{};
+        return merged.toArray(new int[merged.size()][]);
     }
 }
 
