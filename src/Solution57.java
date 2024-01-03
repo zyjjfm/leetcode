@@ -37,15 +37,16 @@ public class Solution57 {
 
                 // 与插入区间有交集，计算他们的并集
                 left = Math.min(left, interval[0]);
-                right = Math.max(left, interval[1]);
+                right = Math.max(right, interval[1]);
 
             }
         }
 
         if(!placed){
-            
+
             ansList.add(new int[]{left,right});
         }
+
         int[][] ans = new int[ansList.size()][2];
 
         for(int i = 0;i < ansList.size();++i){
