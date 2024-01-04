@@ -47,11 +47,8 @@ public class Solution20 {
                 }
                 
                 stack.pop();
-
             }else{
-
                 stack.push(ch);
-                
             }
         }
 
